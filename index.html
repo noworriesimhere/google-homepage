@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Imitation Homepage</title>
+    <style>
+        body {
+            position: relative;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+        }
+
+        .grid {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            grid-template-rows: 47px auto 47px;
+            grid-template-areas:
+            "navbar navbar navbar"
+            ". main ."
+            "footer footer footer";
+        }
+
+        #navbar {
+            grid-area: navbar;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #main {
+            grid-area: main;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20%;
+        }
+
+        #footer {
+            grid-area: footer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #search{
+            display: block;
+            margin: 0 auto 1em -70px;
+            width: 150%;
+            
+        }
+
+        img {
+            margin-bottom: 1em;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div id="navbar">
+            <div class="left">
+                <a href="#">About</a>
+                <a href="#">Store</a>
+            </div>
+            <div class="right">
+                <a href="#">Gmail</a>
+                <a href="#">Images</a>
+                <button>Sign In</button>
+            </div>
+        </div>
+        <div id="main">
+            <div class="container">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+                <form action="">
+                    <input id="search" type="text">
+                    <div class="buttons">
+                        <button>Google Search</button>
+                        <button>I'm Feeling Lucky</button>
+                    </div>
+                </form>
+            </div>   
+        </div>
+        <div id="footer">
+            <div class="left">
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+            <div class="right">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Setting</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
